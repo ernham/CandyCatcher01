@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Apple : MonoBehaviour
 {
-    // 사과가 삭제되는 범위값
+    // 흘린 사과가 삭제되는 범위값
     public static float bottomY = -20f;
     
     // X축이 범위를 벗어 났을 때 사라지게 하니 어색함

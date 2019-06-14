@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 public class ApplePicker : MonoBehaviour
 {
@@ -65,7 +66,11 @@ public class ApplePicker : MonoBehaviour
         //using UnityEngine.SceneManagement;가 있어야 SceneManager사용 가능
         if (basketList.Count == 0)
         {
-            SceneManager.LoadScene("_Scene_0");
+           SceneManager.LoadScene("_Scene_0");
+        
+
+            
+
         }
     }
 }

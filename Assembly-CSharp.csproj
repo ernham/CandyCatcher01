@@ -67,6 +67,7 @@
     <Compile Include="Assets\Scripts\AppleTree.cs" />
     <Compile Include="Assets\Scripts\Basket.cs" />
     <Compile Include="Assets\Scripts\CSVReader.cs" />
+    <Compile Include="Assets\Scripts\GdCandyInfo.cs" />
     <Compile Include="Assets\Scripts\HighScore.cs" />
     <Compile Include="Assets\Scripts\SceneChanger.cs" />
     <Compile Include="Assets\Scripts\SceneLoader.cs" />

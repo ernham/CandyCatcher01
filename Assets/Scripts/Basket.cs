@@ -10,6 +10,10 @@ public class Basket : MonoBehaviour
     //스코어 저장 변수
     public Text scoreGT;
 
+    //획득한 오브젝트에 따라 스코어 개별 정의
+    //추후 csv에서 스코어값을 가져와 정의할 수 있도록 한다.
+    public int appleScore = 100;
+    public int candyScore = 500;
    
     
    
@@ -52,18 +56,28 @@ public class Basket : MonoBehaviour
 
     private void OnCollisionEnter(Collision coll)
     {
+        // scoreGT의 텍스트를 int로 구문 분석
+        int score = int.Parse(scoreGT.text);
+
         // 무엇과 충돌했는지 확인
         GameObject collidedwith = coll.gameObject;
         if ( collidedwith.tag == "Apple")
         {
-            Destroy(collidedwith);
+            //앞서 정의한 사과 획득스코어를 기존 스코어에 추가함
+            score += appleScore;
+            
         }
+        else if (collidedwith.tag == "Candy")
+        {
+            //앞서 정의한 캔디 획득스코어를 기존 스코어에 추가함
+            score += candyScore;
 
-        // scoreGT의 텍스트를 int로 구문 분석
-        int score = int.Parse(scoreGT.text);
+        
+        }
+        
+        //충돌한 오브젝트 즉시 사라짐
+        Destroy(collidedwith);
 
-        //사과를 받은 점수 추가
-        score += 100;
 
         //점수를 다시 문자열로 바꾸고 표시
         scoreGT.text = score.ToString();
